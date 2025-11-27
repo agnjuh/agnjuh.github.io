@@ -7,12 +7,12 @@
   <style>
 
     :root {
-      --bg: #f5f7fc;
-      --text: #111827;
-      --muted: #4b5563;
-      --accent: #102a43;
+      --bg: #f5f7fc;         
+      --text: #111827;        
+      --muted: #4b5563;       
+      --accent: #102a43;      
       --accent-light: #1f4f9a;
-      --border: #dde5f5;
+      --border: #dde5f5;      
       --max-width: 980px;
     }
 
@@ -73,16 +73,25 @@
       line-height: 1.4;
     }
 
-    /* Contact + DNA in one line */
-    .contact-block {
+    .contact-wrapper {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
+      gap: 0.9rem;
       margin-bottom: 0.4rem;
     }
 
-    .contact-block img {
-      max-height: 38px;
+    .contact-body {
+      flex: 1 1 auto;
+    }
+
+    /* DNA illustration */
+    .dna-illustration {
+      margin: 0;
+    }
+    
+    .dna-illustration img {
+      max-height: 105px;
+      width: auto;
       opacity: 0.9;
     }
 
@@ -91,6 +100,7 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--muted);
+      margin-bottom: 0.4rem;
     }
 
     .side-links a {
@@ -221,15 +231,18 @@
       <div class="name">Ágnes Judit Juhász</div>
       <div class="role">Biomedical Science · Molecular Biotechnology · Computational Genomics</div>
 
-      <div class="contact-block">
-        <div class="side-label">Contact</div>
-        <img src="dna.png" alt="DNA">
-      </div>
-
-      <div class="side-links">
-        <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="contact-wrapper">
+        <div class="contact-body">
+          <div class="side-label">Contact</div>
+          <div class="side-links">
+            <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <figure class="dna-illustration">
+          <img src="dna.png" alt="DNA illustration">
+        </figure>
       </div>
 
     </aside>
