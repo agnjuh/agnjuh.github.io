@@ -109,26 +109,8 @@
       margin-bottom: 0.45rem;
     }
 
-    /* ----- Publications list ----- */
-    .pub-list {
-      list-style: disc;
-      margin-left: 1.2rem;
-      margin-top: 0.2rem;
-    }
-
-    .pub-item {
-      margin-bottom: 0.35rem;
-    }
-
-    .pub-meta {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-left: 0.25rem;
-    }
-
     /* ----- Links ----- */
-    .links a,
-    #orcid-publications a {
+    .links a {
       text-decoration: none;
       font-size: 0.95rem;
       color: var(--accent-light);
@@ -220,19 +202,6 @@
   </section>
 
   <section>
-    <h2>Publications & research outputs</h2>
-
-    <div id="orcid-publications">
-      <p>Loading publications from ORCID…</p>
-    </div>
-
-    <p class="muted-text">
-      For a complete and regularly updated list of works, please see my
-      <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID profile</a>.
-    </p>
-  </section>
-
-  <section>
     <h2>Repositories & projects</h2>
     <p>
       My GitHub profile (linked below) contains selected public code examples and smaller projects related to genomics,
@@ -240,8 +209,16 @@
     </p>
     <p>
       Some of my current work, including experimental and computational pipelines, is maintained in private repositories
-      while projects are in progress. In collaborative or professional contexts, additional technical details can be shared,
+      during ongoing development. In collaborative or professional contexts, additional technical details can be shared,
       and access to certain materials may be possible under appropriate agreements.
+    </p>
+  </section>
+
+  <section>
+    <h2>Publications & research outputs</h2>
+    <p class="muted-text">
+      For a complete and regularly updated list of works, please see my
+      <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID profile</a>.
     </p>
   </section>
 
@@ -261,76 +238,9 @@
 </footer>
 
 <script>
-  // Auto-update footer date
   const d = new Date();
   document.getElementById('updated').textContent =
     `Last updated: ${d.toLocaleString('en-US', { month: 'long', year: 'numeric' })}`;
-
-  // Load publications from ORCID
-  async function loadORCID() {
-    const orcid = "0000-0002-7318-4539";
-    const url = `https://pub.orcid.org/v3.0/${orcid}/works`;
-
-    try {
-      const response = await fetch(url, {
-        headers: { "Accept": "application/json" }
-      });
-
-      const data = await response.json();
-      const container = document.getElementById("orcid-publications");
-
-      const works = data.group || [];
-      if (works.length === 0) {
-        container.innerHTML = "<p class='muted-text'>No publications available yet.</p>";
-        return;
-      }
-
-      let html = "<ul class=\"pub-list\">";
-
-      works.forEach(item => {
-        const work = item["work-summary"] && item["work-summary"][0];
-        if (!work) return;
-
-        const title = work.title && work.title.title && work.title.title.value
-          ? work.title.title.value
-          : "Untitled";
-
-        const year = work["publication-date"] &&
-                     work["publication-date"].year &&
-                     work["publication-date"].year.value
-          ? work["publication-date"].year.value
-          : "";
-
-        const extIds = work["external-ids"] && work["external-ids"]["external-id"]
-          ? work["external-ids"]["external-id"]
-          : [];
-
-        const doiObj = extIds.find(id => id["external-id-type"] === "doi");
-        const doiValue = doiObj && doiObj["external-id-value"]
-          ? doiObj["external-id-value"]
-          : null;
-
-        html += "<li class=\"pub-item\">";
-        html += `${title}`;
-        if (year) {
-          html += `<span class="pub-meta">(${year})</span>`;
-        }
-        if (doiValue) {
-          html += ` — <a href="https://doi.org/${doiValue}" target="_blank" rel="noopener">DOI</a>`;
-        }
-        html += "</li>";
-      });
-
-      html += "</ul>";
-      container.innerHTML = html;
-
-    } catch (error) {
-      document.getElementById("orcid-publications").innerHTML =
-        "<p class='muted-text'>Unable to load publications from ORCID at the moment. Please visit the ORCID profile directly.</p>";
-    }
-  }
-
-  loadORCID();
 </script>
 
 </body>
