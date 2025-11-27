@@ -73,16 +73,15 @@
       line-height: 1.4;
     }
 
-    /* DNA illustration */
-    .dna-illustration {
-      text-align: left;
-      margin: 0.4rem 0 1.8rem 0;
-      padding-left: 0.15rem; 
+    .contact-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
     }
-    
-    .dna-illustration img {
-      max-height: 105px;
-      width: auto;
+
+    .contact-block img {
+      max-height: 38px;
       opacity: 0.9;
     }
 
@@ -91,7 +90,6 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--muted);
-      margin-bottom: 0.4rem;
     }
 
     .side-links a {
@@ -222,12 +220,11 @@
       <div class="name">Ágnes Judit Juhász</div>
       <div class="role">Biomedical Science · Molecular Biotechnology · Computational Genomics</div>
 
-      <!-- DNA illustration (active) -->
-      <figure class="dna-illustration">
-        <img src="dna.png" alt="DNA illustration">
-      </figure>
+      <div class="contact-block">
+        <div class="side-label">Contact</div>
+        <img src="dna.png" alt="DNA">
+      </div>
 
-      <div class="side-label">Contact</div>
       <div class="side-links">
         <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
         <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
