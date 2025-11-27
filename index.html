@@ -7,7 +7,7 @@
   <style>
 
     :root {
-      --bg: #f5f7fc;          
+      --bg: #f5f7fc;         
       --text: #111827;        
       --muted: #4b5563;       
       --accent: #102a43;      
@@ -49,11 +49,7 @@
       border-right: 1px solid var(--border);
     }
 
-    .avatar {
-      margin-bottom: 1.3rem;
-      text-align: center;
-    }
-
+    /* Avatar */
     .avatar img {
       max-width: 120px;
       height: auto;
@@ -73,8 +69,20 @@
     .role {
       font-size: 0.95rem;
       color: var(--muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.6rem;
       line-height: 1.4;
+    }
+
+    /* DNA illustration */
+    .dna-illustration {
+      text-align: center;
+      margin: 1rem 0 1.6rem 0;
+    }
+
+    .dna-illustration img {
+      max-height: 110px;
+      width: auto;
+      opacity: 0.9;
     }
 
     .side-label {
@@ -83,10 +91,6 @@
       letter-spacing: 0.16em;
       color: var(--muted);
       margin-bottom: 0.4rem;
-    }
-
-    .side-links {
-      margin-top: 0.4rem;
     }
 
     .side-links a {
@@ -206,13 +210,21 @@
 
     <!-- LEFT COLUMN: SIDEBAR -->
     <aside class="sidebar">
+
+      <!-- Avatar pic-->
       <!--
       <figure class="avatar">
         <img src="portrait.jpg" alt="Portrait of Ágnes Judit Juhász">
       </figure>
       -->
+
       <div class="name">Ágnes Judit Juhász</div>
       <div class="role">Biomedical Science · Molecular Biotechnology · Computational Genomics</div>
+
+      <!-- DNA illustration (active) -->
+      <figure class="dna-illustration">
+        <img src="dna.png" alt="DNA illustration">
+      </figure>
 
       <div class="side-label">Contact</div>
       <div class="side-links">
@@ -220,6 +232,7 @@
         <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
         <a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
       </div>
+
     </aside>
 
     <!-- RIGHT COLUMN: MAIN CONTENT -->
