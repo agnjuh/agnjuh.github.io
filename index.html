@@ -197,13 +197,32 @@
   </section>
 
   <section>
+    <h2>Publications & research outputs</h2>
+
+    <div id="orcid-publications">
+      <p>Loading publications from ORCID…</p>
+    </div>
+
+    <p>
+      Full and regularly updated list on ORCID:
+      <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">
+        https://orcid.org/0000-0002-7318-4539
+      </a>
+    </p>
+  </section>
+
+  <section>
     <h2>Repositories & projects</h2>
     <p>
-      Some of my current projects involve experimental and computational workflows that are not publicly available due to
-      ongoing work. This page includes selected public examples and smaller code snippets illustrating my analytical and
-      methodological approaches. In collaborative or professional contexts, additional technical details can be shared, and
-      access to certain materials may be possible under appropriate agreements.
+      My GitHub profile (linked below) contains selected public code examples and smaller projects related to genomics,
+      molecular biology, and data analysis.
     </p>
+    <p>
+      Some of my current work, including experimental and computational pipelines, is maintained in private repositories
+      while projects are in progress. In collaborative or professional contexts, additional technical details can be shared,
+      and access to certain materials may be possible under appropriate agreements.
+    </p>
+    
   </section>
 
   <section>
@@ -226,6 +245,70 @@
   const d = new Date();
   document.getElementById('updated').textContent =
     `Last updated: ${d.toLocaleString('en-US', { month: 'long', year: 'numeric' })}`;
+
+  // Load publications from ORCID
+  async function loadORCID() {
+    const orcid = "0000-0002-7318-4539";
+    const url = `https://pub.orcid.org/v3.0/${orcid}/works`;
+
+    try {
+      const response = await fetch(url, {
+        headers: { "Accept": "application/json" }
+      });
+
+      const data = await response.json();
+      const container = document.getElementById("orcid-publications");
+
+      const works = data.group || [];
+      if (works.length === 0) {
+        container.innerHTML = "<p>No publications available yet.</p>";
+        return;
+      }
+
+      let html = "<ul>";
+
+      works.forEach(item => {
+        const work = item["work-summary"] && item["work-summary"][0];
+        if (!work) return;
+
+        const title = work.title && work.title.title && work.title.title.value
+          ? work.title.title.value
+          : "Untitled";
+
+        const year = work["publication-date"] &&
+                     work["publication-date"].year &&
+                     work["publication-date"].year.value
+          ? work["publication-date"].year.value
+          : "";
+
+        const extIds = work["external-ids"] && work["external-ids"]["external-id"]
+          ? work["external-ids"]["external-id"]
+          : [];
+
+        const doiObj = extIds.find(id => id["external-id-type"] === "doi");
+        const doiValue = doiObj && doiObj["external-id-value"]
+          ? doiObj["external-id-value"]
+          : null;
+
+        html += "<li>";
+        html += `<strong>${title}</strong>`;
+        if (year) html += ` (${year})`;
+        if (doiValue) {
+          html += ` — <a href="https://doi.org/${doiValue}" target="_blank" rel="noopener">DOI</a>`;
+        }
+        html += "</li>";
+      });
+
+      html += "</ul>";
+      container.innerHTML = html;
+
+    } catch (error) {
+      document.getElementById("orcid-publications").innerHTML =
+        "<p>Unable to load publications from ORCID at the moment. Please visit the ORCID profile directly.</p>";
+    }
+  }
+
+  loadORCID();
 </script>
 
 </body>
