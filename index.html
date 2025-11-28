@@ -205,6 +205,63 @@
       }
     }
 
+    /* ------------------------- */
+    /*  CONTACT FORM STYLES  */
+    /* ------------------------- */
+
+    #contact form {
+      max-width: 520px;
+      margin-top: 0.5rem;
+    }
+
+    #contact .form-row {
+      margin-bottom: 0.9rem;
+    }
+
+    #contact label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 0.25rem;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      font: inherit;
+      line-height: 1.4;
+    }
+
+    #contact textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    #contact button[type="submit"] {
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-light);
+      background: var(--accent-light);
+      color: #ffffff;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    #contact button[type="submit"]:hover {
+      filter: brightness(0.95);
+    }
+
+    #contact .form-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
   </style>
 </head>
 
@@ -235,6 +292,7 @@
         <div class="contact-body">
           <div class="side-label">Contact</div>
           <div class="side-links">
+            <a href="#contact">Contact me via email</a>
             <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
             <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
             <a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
@@ -298,6 +356,37 @@
           For a complete and regularly updated list of works, please see my
           <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID profile</a>.
         </p>
+      </section>
+
+      <!-- CONTACT FORM (ÚJ) -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>If you would like to get in touch, you can send me a message using the form below.</p>
+
+        <form action="https://formspree.io/f/mangdgzy" method="POST">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <button type="submit">Send</button>
+          </div>
+
+          <p class="form-note">
+            Your message will be delivered securely via Formspree.
+          </p>
+        </form>
       </section>
 
     </div><!-- /.content -->
