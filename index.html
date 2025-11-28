@@ -106,14 +106,28 @@
       color: var(--accent-light);
       text-decoration: none;
       padding: 0.1rem 0;
+      position: relative;
     }
 
     .side-links a + a {
       margin-top: 0.3rem;
     }
 
-    .side-links a:hover {
-      text-decoration: underline;
+    .side-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.05em;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease;
+    }
+
+    .side-links a:hover::after {
+      transform: scaleX(1);
     }
 
     .content {
@@ -166,10 +180,24 @@
     .muted-text a {
       text-decoration: none;
       color: var(--accent-light);
+      position: relative;
     }
 
-    .muted-text a:hover {
-      text-decoration: underline;
+    .muted-text a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.05em;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease;
+    }
+
+    .muted-text a:hover::after {
+      transform: scaleX(1);
     }
 
     footer {
