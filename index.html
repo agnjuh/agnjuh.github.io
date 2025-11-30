@@ -244,11 +244,11 @@
         padding-left: 0;
       }
 
-      .dna-seq-bg {
+      .mrna-seq-bg {
         display: none;
       }
 
-      .aa-seq-bg {
+      .protein-seq-bg {
         display: none;
       }
     }
@@ -310,7 +310,7 @@
       scroll-behavior: smooth;
     }
 
-    .dna-seq-bg {
+    .mrna-seq-bg {
       position: fixed;
       top: 0;
       right: 0;
@@ -325,13 +325,13 @@
       background: linear-gradient(to left, rgba(255,255,255,0.7), transparent);
     }
 
-    .dna-seq-track {
+    .mrna-seq-track {
       display: flex;
       flex-direction: column;
       animation: seqScroll 40s linear infinite;
     }
 
-    .dna-seq-block {
+    .mrna-seq-block {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.72rem;
       letter-spacing: 0.1em;
@@ -349,7 +349,7 @@
       100% { transform: translateY(-50%); }
     }
 
-    .aa-seq-bg {
+    .protein-seq-bg {
       position: fixed;
       top: 0;
       left: 0;
@@ -364,13 +364,13 @@
       background: linear-gradient(to right, rgba(255,255,255,0.7), transparent);
     }
 
-    .aa-seq-track {
+    .protein-seq-track {
       display: flex;
       flex-direction: column;
       animation: aaScroll 45s linear infinite;
     }
 
-    .aa-seq-block {
+    .protein-seq-block {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.7rem;
       letter-spacing: 0.12em;
@@ -394,9 +394,9 @@
 
 <body>
 
-<div class="aa-seq-bg">
-  <div class="aa-seq-track">
-    <div class="aa-seq-block">
+<div class="protein-seq-bg">
+  <div class="protein-seq-track">
+    <div class="protein-seq-block">
 MEEPQSDPSV
 EPPLSQETFS
 DLWKLLPENN
@@ -646,10 +646,10 @@ DSD
   </div>
 </div>
 
-<div class="dna-seq-bg">
-  <div class="dna-seq-track">
-    <div class="dna-seq-block"></div>
-    <div class="dna-seq-block"></div>
+<div class="mrna-seq-bg">
+  <div class="mrna-seq-track">
+    <div class="mrna-seq-block"></div>
+    <div class="mrna-seq-block"></div>
   </div>
 </div>
 
@@ -790,7 +790,7 @@ DSD
     `Last updated: ${d.toLocaleString('en-US', { month: 'long', year: 'numeric' })}`;
 
   (function() {
-    const rawDNA = `
+    const rawMRNA = `
 CTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGC
 TGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTG
 CCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATG
@@ -828,7 +828,7 @@ CCTGGGCTCAGGCGATCCACCTGTCTCAGCCTCCCAGAGTGCTGGGATTACAATTGTGAGCCACCACGTC
 CAGCTGGAAGGGTCAACATCTTTTACATTCTGCAAGCACATCTGCATTTTCACCCCACCCTTCCCCTCCT
 TCTCCCTTTTTATATCCCATTTTTATATCGATCTCTTATTTTACAATAAAACTTTGCTGCCA
     `;
-    const cleaned = rawDNA.replace(/\s+/g, '').trim();
+    const cleaned = rawMRNA.replace(/\s+/g, '').trim();
     const codons = [];
     for (let i = 0; i < cleaned.length; i += 3) {
       codons.push(cleaned.slice(i, i + 3));
@@ -839,7 +839,7 @@ TCTCCCTTTTTATATCCCATTTTTATATCGATCTCTTATTTTACAATAAAACTTTGCTGCCA
       lines.push(codons.slice(i, i + perLine).join(' '));
     }
     const text = lines.join('\n');
-    document.querySelectorAll('.dna-seq-block').forEach(el => {
+    document.querySelectorAll('.mrna-seq-block').forEach(el => {
       el.textContent = text;
     });
   })();
