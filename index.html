@@ -33,6 +33,8 @@
     main {
       max-width: var(--max-width);
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     .layout {
@@ -241,11 +243,11 @@
       .content {
         padding-left: 0;
       }
-    }
 
-    /* ------------------------- */
-    /*  CONTACT FORM STYLES  */
-    /* ------------------------- */
+      .dna-seq-bg {
+        display: none;
+      }
+    }
 
     #contact form {
       max-width: 520px;
@@ -300,17 +302,142 @@
       margin-top: 0.4rem;
     }
 
-    /* ------------------------- */
-    /*  SMOOTH SCROLL  */
-    /* ------------------------- */
     html {
       scroll-behavior: smooth;
+    }
+
+    .dna-seq-bg {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 90px;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.12;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to left, rgba(255,255,255,0.7), transparent);
+    }
+
+    .dna-seq-track {
+      display: flex;
+      flex-direction: column;
+      animation: seqScroll 40s linear infinite;
+    }
+
+    .dna-seq-block {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      line-height: 1.55;
+      color: #6b7280;
+      white-space: pre;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding-left: 4px;
+    }
+
+    @keyframes seqScroll {
+      0%   { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
     }
 
   </style>
 </head>
 
 <body>
+
+<div class="dna-seq-bg">
+  <div class="dna-seq-track">
+    <div class="dna-seq-block">
+ATG CCT GAA
+TGC AAG TTT
+GGC CAG TGA
+GCT TGA ACC
+TGC AAT GGC
+CTT GAA CAG
+TTT GGA CCT
+TGC AAG TTC
+GGA CAG TTT
+GGC CCT TGA
+ATG CCT GAA
+TGC AAG TTT
+GGC CAG TGA
+GCT TGA ACC
+TGC AAT GGC
+CTT GAA CAG
+TTT GGA CCT
+TGC AAG TTC
+GGA CAG TTT
+GGC CCT TGA
+ATG CCT GAA
+TGC AAG TTT
+GGC CAG TGA
+GCT TGA ACC
+TGC AAT GGC
+CTT GAA CAG
+TTT GGA CCT
+TGC AAG TTC
+GGA CAG TTT
+GGC CCT TGA
+ATG CCT GAA
+TGC AAG TTT
+GGC CAG TGA
+GCT TGA ACC
+TGC AAT GGC
+CTT GAA CAG
+TTT GGA CCT
+TGC AAG TTC
+GGA CAG TTT
+GGC CCT TGA
+    </div>
+    <div class="dna-seq-block">
+ATG CCT GAA
+TGC AAG TTT
+GGC CAG TGA
+GCT TGA ACC
+TGC AAT GGC
+CTT GAA CAG
+TTT GGA CCT
+TGC AAG TTC
+GGA CAG TTT
+GGC CCT TGA
+ATG CCT GAA
+TGC AAG TTT
+GGC CAG TGA
+GCT TGA ACC
+TGC AAT GGC
+CTT GAA CAG
+TTT GGA CCT
+TGC AAG TTC
+GGA CAG TTT
+GGC CCT TGA
+ATG CCT GAA
+TGC AAG TTT
+GGC CAG TGA
+GCT TGA ACC
+TGC AAT GGC
+CTT GAA CAG
+TTT GGA CCT
+TGC AAG TTC
+GGA CAG TTT
+GGC CCT TGA
+ATG CCT GAA
+TGC AAG TTT
+GGC CAG TGA
+GCT TGA ACC
+TGC AAT GGC
+CTT GAA CAG
+TTT GGA CCT
+TGC AAG TTC
+GGA CAG TTT
+GGC CCT TGA
+    </div>
+  </div>
+</div>
 
 <main>
 
