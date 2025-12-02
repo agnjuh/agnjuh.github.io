@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLG35H9DMP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLG35H9DMP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QLG35H9DMP');
+  </script>
 
-  gtag('config', 'G-QLG35H9DMP');
-</script>
   <meta charset="UTF-8">
   <title>Ágnes Judit Juhász – Biomedical Science · Molecular Biotechnology · Computational Genomics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
 
+    /* colour variables (LIGHT mode) */
     :root {
-      --bg: #f5f7fc;         
-      --text: #111827;        
-      --muted: #4b5563;       
-      --accent: #102a43;      
+      --bg: #f5f7fc;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #102a43;
       --accent-light: #1f4f9a;
-      --border: #dde5f5;      
+      --border: #dde5f5;
       --max-width: 980px;
     }
 
+    /* DARK mode colour variables */
+    html[data-theme="dark"] {
+      --bg: #0f0f11;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #cdd5ff;
+      --accent-light: #9bb0ff;
+      --border: #2a2a2d;
+    }
+
+    /* DARK mode sequence background style override */
+    html[data-theme="dark"] .mrna-seq-bg,
+    html[data-theme="dark"] .protein-seq-bg {
+      background: none;
+      opacity: 0.08;
+    }
+
+    /* DARK mode toggle button */
+    #theme-toggle {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 9999;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    /* global resets */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    /* body layout */
     body {
       font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       line-height: 1.75;
@@ -39,6 +75,7 @@
       padding: 3rem 1.5rem;
     }
 
+    /* MAIN content container */
     main {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -46,12 +83,14 @@
       z-index: 1;
     }
 
+    /* two-COLUMN layout */
     .layout {
       display: flex;
       gap: 0rem;
       align-items: flex-start;
     }
 
+    /* left sidebar column */
     .sidebar {
       width: 280px;
       flex: 0 0 280px;
@@ -59,6 +98,7 @@
       border-right: 1px solid var(--border);
     }
 
+    /* sidebar AVATAR */
     .avatar img {
       max-width: 120px;
       height: auto;
@@ -66,6 +106,7 @@
       display: inline-block;
     }
 
+    /* name styling */
     .name {
       font-size: 1.5rem;
       font-weight: 500;
@@ -75,6 +116,7 @@
       letter-spacing: 0.02em;
     }
 
+    /* nole subtitles */
     .role {
       font-size: 0.95rem;
       color: var(--muted);
@@ -82,6 +124,7 @@
       line-height: 1.4;
     }
 
+    /* contact block layout */
     .contact-wrapper {
       display: flex;
       align-items: flex-start;
@@ -93,6 +136,7 @@
       flex: 0 1 auto;
     }
 
+    /* DNA illustration */
     .dna-illustration {
       margin: 0;
     }
@@ -103,6 +147,7 @@
       opacity: 0.9;
     }
 
+    /* sidebar section label */
     .side-label {
       font-size: 0.8rem;
       text-transform: uppercase;
@@ -111,6 +156,7 @@
       margin-bottom: 0.4rem;
     }
 
+    /* sidebar links */
     .side-links {
       display: flex;
       flex-direction: column;
@@ -130,6 +176,7 @@
       margin-top: 0.3rem;
     }
 
+    /* LINK HOVER underline animation */
     .side-links a::after {
       content: "";
       position: absolute;
@@ -147,11 +194,13 @@
       transform: scaleX(1);
     }
 
+    /* MAIN content column */
     .content {
       flex: 1 1 auto;
       padding-left: 1.5rem;
     }
 
+    /* section layout */
     section {
       margin-top: 2rem;
       padding-top: 1.5rem;
@@ -164,6 +213,7 @@
       border-top: none;
     }
 
+    /* section headings */
     h2 {
       font-size: 0.9rem;
       color: var(--accent-light);
@@ -173,11 +223,13 @@
       font-weight: 500;
     }
 
+    /* paragraph text */
     p {
       margin-bottom: 1rem;
       font-size: 0.96rem;
     }
 
+    /* bullet lists */
     ul {
       margin-left: 1.1rem;
       margin-bottom: 0.8rem;
@@ -189,6 +241,7 @@
       font-size: 0.95rem;
     }
 
+    /* muted text paragraphs */
     .muted-text {
       color: var(--muted);
       font-size: 0.9rem;
@@ -221,6 +274,7 @@
       transform: scaleX(1);
     }
 
+    /* FOOTER styling */
     footer {
       max-width: var(--max-width);
       margin: 2rem auto 0;
@@ -231,6 +285,7 @@
       border-top: 1px solid var(--border);
     }
 
+    /* MOBILE layout adjustments */
     @media (max-width: 800px) {
       body {
         padding: 2.2rem 1.1rem;
@@ -253,6 +308,7 @@
         padding-left: 0;
       }
 
+      /* hide sequence animations on mobile */
       .mrna-seq-bg {
         display: none;
       }
@@ -262,6 +318,7 @@
       }
     }
 
+    /* CONTACT form layout */
     #contact form {
       max-width: 520px;
       margin-top: 0.5rem;
@@ -278,6 +335,7 @@
       margin-bottom: 0.25rem;
     }
 
+    /* contact form fields */
     #contact input[type="text"],
     #contact input[type="email"],
     #contact textarea {
@@ -295,6 +353,7 @@
       resize: vertical;
     }
 
+    /* SUBMIT button */
     #contact button[type="submit"] {
       padding: 0.5rem 1.2rem;
       border-radius: 999px;
@@ -315,10 +374,27 @@
       margin-top: 0.4rem;
     }
 
+    /* CONTACT form DARK mode fields */
+    html[data-theme="dark"] #contact input[type="text"],
+    html[data-theme="dark"] #contact input[type="email"],
+    html[data-theme="dark"] #contact textarea {
+      background: #111827;
+      border-color: #374151;
+      color: var(--text);
+    }
+
+    html[data-theme="dark"] #contact input[type="text"]::placeholder,
+    html[data-theme="dark"] #contact input[type="email"]::placeholder,
+    html[data-theme="dark"] #contact textarea::placeholder {
+      color: #6b7280;
+    }
+
+    /* smooth page scrolling */
     html {
       scroll-behavior: smooth;
     }
 
+    /* mRNA sequence background column */
     .mrna-seq-bg {
       position: fixed;
       top: 0;
@@ -334,12 +410,14 @@
       background: linear-gradient(to left, rgba(255,255,255,0.7), transparent);
     }
 
+    /* mRNA scroll animation container */
     .mrna-seq-track {
       display: flex;
       flex-direction: column;
       animation: seqScroll 40s linear infinite;
     }
 
+    /* mRNA block text formatting */
     .mrna-seq-block {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.72rem;
@@ -353,11 +431,13 @@
       padding-left: 4px;
     }
 
+    /* mRNA scroll animation */
     @keyframes seqScroll {
       0%   { transform: translateY(0); }
       100% { transform: translateY(-50%); }
     }
 
+    /* protein sequence background column */
     .protein-seq-bg {
       position: fixed;
       top: 0;
@@ -373,12 +453,14 @@
       background: linear-gradient(to right, rgba(255,255,255,0.7), transparent);
     }
 
+    /* protein scroll animation container */
     .protein-seq-track {
       display: flex;
       flex-direction: column;
       animation: aaScroll 45s linear infinite;
     }
 
+    /* protein block text formatting */
     .protein-seq-block {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.7rem;
@@ -393,6 +475,7 @@
       text-align: right;
     }
 
+    /* protein scroll animation */
     @keyframes aaScroll {
       0%   { transform: translateY(-50%); }
       100% { transform: translateY(0); }
@@ -403,9 +486,13 @@
 
 <body>
 
-<div class="protein-seq-bg">
-  <div class="protein-seq-track">
-    <div class="protein-seq-block">
+  <!-- DARK mode toggle button -->
+  <button id="theme-toggle">Dark mode</button>
+
+  <!-- protein sequence background (LEFT column) -->
+  <div class="protein-seq-bg">
+    <div class="protein-seq-track">
+      <div class="protein-seq-block">
 MEEPQSDPSV
 EPPLSQETFS
 DLWKLLPENN
@@ -487,231 +574,75 @@ GSRAHSSHLK
 SKKGQSTSRH
 KKLMFKTEGP
 DSD
-
-MEEPQSDPSV
-EPPLSQETFS
-DLWKLLPENN
-VLSPLPSQAM
-DDLMLSPDDI
-EQWFTEDPGP
-DEAPRMPEAA
-PPVAPAPAAP
-TPAAPAPAPS
-WPLSSSVPSQ
-KTYQGSYGFR
-LGFLHSGTAK
-SVTCTYSPAL
-NKMFCQLAKT
-CPVQLWVDST
-PPPGTRVRAM
-AIYKQSQHMT
-EVVRRCPHHE
-RCSDSDGLAP
-PQHLIRVEGN
-LRVEYLDDRN
-TFRHSVVVPY
-EPPEVGSDCT
-TIHYNYMCNS
-SCMGGMNRRP
-ILTIITLEDS
-SGNLLGRNSF
-EVRVCACPGR
-DRRTEEENLR
-KKGEPHHELP
-PGSTKRALPN
-NTSSSPQPKK
-KPLDGEYFTL
-QIRGRERFEM
-FRELNEALEL
-KDAQAGKEPG
-GSRAHSSHLK
-SKKGQSTSRH
-KKLMFKTEGP
-DSD
-
-MEEPQSDPSV
-EPPLSQETFS
-DLWKLLPENN
-VLSPLPSQAM
-DDLMLSPDDI
-EQWFTEDPGP
-DEAPRMPEAA
-PPVAPAPAAP
-TPAAPAPAPS
-WPLSSSVPSQ
-KTYQGSYGFR
-LGFLHSGTAK
-SVTCTYSPAL
-NKMFCQLAKT
-CPVQLWVDST
-PPPGTRVRAM
-AIYKQSQHMT
-EVVRRCPHHE
-RCSDSDGLAP
-PQHLIRVEGN
-LRVEYLDDRN
-TFRHSVVVPY
-EPPEVGSDCT
-TIHYNYMCNS
-SCMGGMNRRP
-ILTIITLEDS
-SGNLLGRNSF
-EVRVCACPGR
-DRRTEEENLR
-KKGEPHHELP
-PGSTKRALPN
-NTSSSPQPKK
-KPLDGEYFTL
-QIRGRERFEM
-FRELNEALEL
-KDAQAGKEPG
-GSRAHSSHLK
-SKKGQSTSRH
-KKLMFKTEGP
-DSD
-
-MEEPQSDPSV
-EPPLSQETFS
-DLWKLLPENN
-VLSPLPSQAM
-DDLMLSPDDI
-EQWFTEDPGP
-DEAPRMPEAA
-PPVAPAPAAP
-TPAAPAPAPS
-WPLSSSVPSQ
-KTYQGSYGFR
-LGFLHSGTAK
-SVTCTYSPAL
-NKMFCQLAKT
-CPVQLWVDST
-PPPGTRVRAM
-AIYKQSQHMT
-EVVRRCPHHE
-RCSDSDGLAP
-PQHLIRVEGN
-LRVEYLDDRN
-TFRHSVVVPY
-EPPEVGSDCT
-TIHYNYMCNS
-SCMGGMNRRP
-ILTIITLEDS
-SGNLLGRNSF
-EVRVCACPGR
-DRRTEEENLR
-KKGEPHHELP
-PGSTKRALPN
-NTSSSPQPKK
-KPLDGEYFTL
-QIRGRERFEM
-FRELNEALEL
-KDAQAGKEPG
-GSRAHSSHLK
-SKKGQSTSRH
-KKLMFKTEGP
-DSD
-
-MEEPQSDPSV
-EPPLSQETFS
-DLWKLLPENN
-VLSPLPSQAM
-DDLMLSPDDI
-EQWFTEDPGP
-DEAPRMPEAA
-PPVAPAPAAP
-TPAAPAPAPS
-WPLSSSVPSQ
-KTYQGSYGFR
-LGFLHSGTAK
-SVTCTYSPAL
-NKMFCQLAKT
-CPVQLWVDST
-PPPGTRVRAM
-AIYKQSQHMT
-EVVRRCPHHE
-RCSDSDGLAP
-PQHLIRVEGN
-LRVEYLDDRN
-TFRHSVVVPY
-EPPEVGSDCT
-TIHYNYMCNS
-SCMGGMNRRP
-ILTIITLEDS
-SGNLLGRNSF
-EVRVCACPGR
-DRRTEEENLR
-KKGEPHHELP
-PGSTKRALPN
-NTSSSPQPKK
-KPLDGEYFTL
-QIRGRERFEM
-FRELNEALEL
-KDAQAGKEPG
-GSRAHSSHLK
-SKKGQSTSRH
-KKLMFKTEGP
-DSD
+      </div>
     </div>
   </div>
-</div>
 
-<div class="mrna-seq-bg">
-  <div class="mrna-seq-track">
-    <div class="mrna-seq-block"></div>
-    <div class="mrna-seq-block"></div>
+  <!-- mRNA sequence background (RIGHT column) -->
+  <div class="mrna-seq-bg">
+    <div class="mrna-seq-track">
+      <div class="mrna-seq-block"></div>
+      <div class="mrna-seq-block"></div>
+    </div>
   </div>
-</div>
 
-<main>
+  <!-- main content wrapper -->
+  <main>
 
-  <div class="layout">
+    <!-- two-column layout container -->
+    <div class="layout">
 
-    <!-- LEFT COLUMN: SIDEBAR -->
-    <aside class="sidebar">
+      <!-- sidebar (LEFT column) -->
+      <aside class="sidebar">
 
-      <div class="name">Ágnes Judit Juhász</div>
-      <div class="role">
-        Biomedical Science<br>
-        Molecular Biotechnology<br>
-        Computational Genomics
-      </div>
-
-      <div class="contact-wrapper">
-        <div class="contact-body">
-          <div class="side-label">Contact</div>
-          <div class="side-links">
-            <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
-            <a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="#contact">Contact me via email</a>
-          </div>
+        <!-- name + fields -->
+        <div class="name">Ágnes Judit Juhász</div>
+        <div class="role">
+          Biomedical Science<br>
+          Molecular Biotechnology<br>
+          Computational Genomics
         </div>
-        <figure class="dna-illustration">
-          <img src="dna.png" alt="DNA illustration">
-        </figure>
-      </div>
 
-    </aside>
+        <!-- contact links + DNA illustration -->
+        <div class="contact-wrapper">
+          <div class="contact-body">
+            <div class="side-label">Contact</div>
+            <div class="side-links">
+              <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
+              <a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="#contact">Contact me via email</a>
+            </div>
+          </div>
 
-    <!-- RIGHT COLUMN: MAIN CONTENT -->
-    <div class="content">
+          <!-- sidebar DNA illustration -->
+          <figure class="dna-illustration">
+            <img src="dna.png" alt="DNA illustration">
+          </figure>
+        </div>
 
-      <!-- ABOUT -->
-      <section>
-        <h2>About</h2>
-        <p>
-          My research focuses on how genetic, epigenetic, and environmental cues shape cellular identity, tissue organisation,
-          and regenerative potential. I am interested in the regulatory principles that maintain developmental robustness,
-          coordinate dynamic cellular responses, and preserve genome integrity across contexts.
-        </p>
-        <p>
-          By connecting molecular mechanisms with higher-order tissue behaviour, I aim to understand how biological systems
-          achieve stability and adaptability, and how their disruption contributes to variation, repair outcomes, and disease.
-        </p>
-      </section>
+      </aside>
 
-      <!-- TECHNICAL / METHODS -->
-      <section>
+      <!-- MAIN content area -->
+      <div class="content">
+
+        <!-- ABOUT -->
+        <section>
+          <h2>About</h2>
+          <p>
+            My research focuses on how genetic, epigenetic, and environmental cues shape cellular identity, tissue organisation,
+            and regenerative potential. I am interested in the regulatory principles that maintain developmental robustness,
+            coordinate dynamic cellular responses, and preserve genome integrity across contexts.
+          </p>
+          <p>
+            By connecting molecular mechanisms with higher-order tissue behaviour, I aim to understand how
+            biological systems achieve stability and adaptability, and how their disruption contributes to
+            variation, repair outcomes, and disease.
+          </p>
+        </section>
+
+        <!-- TECHNICAL / METHODS -->
+       <section>
         <h2>Experimental and computational expertise</h2>
         <ul>
           <li>CRISPR-based genome editing, stem cell and organoid systems, advanced microscopy</li>
@@ -725,80 +656,110 @@ DSD
         </ul>
       </section>
 
-      <!-- REPOSITORIES -->
-      <section>
-        <h2>Repositories & projects</h2>
-        <p>
-          My GitHub profile (linked in the sidebar) contains selected public code examples and smaller projects related to
-          genomics, molecular biology, and data analysis.
-        </p>
-        <p>
-          Some of my current work, including experimental and computational pipelines, is maintained in private repositories
-          during ongoing development. In collaborative or professional contexts, additional technical details can be shared,
-          and access to certain materials may be possible under appropriate agreements.
-        </p>
-      </section>
-
-      <!-- PUBLICATIONS, detailed CV -->
-      <section>
-        <h2>Publications & research outputs</h2>
-        <p class="muted-text">
-          For a complete and regularly updated list of works, please see my
-          <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID profile</a>.
-        </p>
-        <p class="muted-text">
-          My detailed CV is available upon request via
-          <a href="https://drive.google.com/drive/folders/1M2U_ocXMeP06-cYvOfPUqmXAjyWg5vZH?usp=sharing" target="_blank" rel="noopener">this link</a>.
-        </p>
-      </section>
-
-      <!-- CONTACT FORM  -->
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>If you would like to get in touch, you can send me a message using the form below.</p>
-
-        <form action="https://formspree.io/f/mangdgzy" method="POST">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required>
-          </div>
-
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
-          </div>
-
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-
-          <div class="form-row">
-            <button type="submit">Send</button>
-          </div>
-
-          <p class="form-note">
-            Your message will be delivered securely via Formspree.
+        <!-- REPOSITORIES -->
+        <section>
+          <h2>Repositories & projects</h2>
+          <p>
+            My GitHub profile (linked in the sidebar) contains selected public code examples and smaller projects related to
+            genomics, molecular biology, and data analysis.
           </p>
-        </form>
-      </section>
+          <p>
+            Some of my current work, including experimental and computational pipelines, is maintained in private repositories
+            during ongoing development. In collaborative or professional contexts, additional technical details can be shared,
+            and access to certain materials may be possible under appropriate agreements.
+          </p>
+        </section>
 
-    </div><!-- /.content -->
+        <!-- PUBLICATIONS, detailed CV -->
+        <section>
+          <h2>Publications & research outputs</h2>
+          <p class="muted-text">
+            For a complete and updated list of works, see my
+            <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID profile</a>.
+          </p>
+          <p class="muted-text">
+            My detailed CV is available upon request via
+            <a href="https://drive.google.com/drive/folders/1M2U_ocXMeP06-cYvOfPUqmXAjyWg5vZH?usp=sharing" target="_blank" rel="noopener">
+              this link
+            </a>.
+          </p>
+        </section>
 
-  </div><!-- /.layout -->
+        <!-- CONTACT FORM -->
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>If you would like to get in touch, you can send me a message using the form below.</p>
 
-</main>
+          <form action="https://formspree.io/f/mangdgzy" method="POST">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required>
+            </div>
 
-<footer>
-  © 2025 Ágnes J. Juhász — <span id="updated"></span>
-</footer>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+            </div>
 
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="form-row">
+              <button type="submit">Send</button>
+            </div>
+
+            <p class="form-note">
+              Your message will be delivered securely via Formspree.
+            </p>
+          </form>
+        </section>
+
+      </div><!-- end .content -->
+
+    </div><!-- end .layout -->
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Ágnes J. Juhász — <span id="updated"></span>
+  </footer>
+
+<!-- DARK mode script -->
 <script>
+  // toggle button 
+  const toggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  // toggle click
+  toggle.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    toggle.textContent = isDark ? 'Dark mode' : 'Light mode';
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  });
+
+
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    root.setAttribute('data-theme', saved);
+    toggle.textContent = saved === 'dark' ? 'Light mode' : 'Dark mode';
+  }
+</script>
+
+<!-- FOOTER timestamp & ...SEQ - mRNA formatting -->
+<script>
+  // update footer with last-modified date
   const d = new Date();
   document.getElementById('updated').textContent =
     `Last updated: ${d.toLocaleString('en-US', { month: 'long', year: 'numeric' })}`;
 
+  // generate and format mRNA sequence block
   (function() {
+
+    // raw mRNA sequence
     const rawMRNA = `
 CTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGC
 TGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTG
@@ -837,20 +798,31 @@ CCTGGGCTCAGGCGATCCACCTGTCTCAGCCTCCCAGAGTGCTGGGATTACAATTGTGAGCCACCACGTC
 CAGCTGGAAGGGTCAACATCTTTTACATTCTGCAAGCACATCTGCATTTTCACCCCACCCTTCCCCTCCT
 TCTCCCTTTTTATATCCCATTTTTATATCGATCTCTTATTTTACAATAAAACTTTGCTGCCA
     `;
+
+    // remove whitespace from sequence -- dark mode
     const cleaned = rawMRNA.replace(/\s+/g, '').trim();
+
+    // split into codons
     const codons = [];
     for (let i = 0; i < cleaned.length; i += 3) {
       codons.push(cleaned.slice(i, i + 3));
     }
+
+    // format codons into lines
     const perLine = 3;
     const lines = [];
     for (let i = 0; i < codons.length; i += perLine) {
       lines.push(codons.slice(i, i + perLine).join(' '));
     }
+
+    // combine into text block
     const text = lines.join('\n');
+
+    // insert formatted sequence into both DOM blocks
     document.querySelectorAll('.mrna-seq-block').forEach(el => {
       el.textContent = text;
     });
+
   })();
 </script>
 
