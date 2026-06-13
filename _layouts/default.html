@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} – Ágnes Judit Juhász</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #f5f7fc;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #102a43;
+      --accent-light: #1f4f9a;
+      --border: #dde5f5;
+      --max-width: 980px;
+    }
+
+    html[data-theme="dark"] {
+      --bg: #0f0f11;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #cdd5ff;
+      --accent-light: #9bb0ff;
+      --border: #2a2a2d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      line-height: 1.75;
+      background: var(--bg);
+      color: var(--text);
+      padding: 3rem 1.5rem;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .layout {
+      display: flex;
+      gap: 0;
+      align-items: flex-start;
+    }
+
+    .sidebar {
+      width: 280px;
+      flex: 0 0 280px;
+      padding-right: 1.5rem;
+      border-right: 1px solid var(--border);
+    }
+
+    .content {
+      flex: 1 1 auto;
+      padding-left: 1.5rem;
+    }
+
+    .profile-photo {
+      margin: 1.2rem 0 1.5rem 0;
+    }
+
+    .profile-photo img {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      display: block;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
+
+    .side-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .side-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .side-links a,
+    .content a {
+      color: var(--accent-light);
+      text-decoration: none;
+    }
+
+    .side-links a {
+      font-size: 0.92rem;
+      padding: 0.1rem 0;
+    }
+
+    .side-links a + a {
+      margin-top: 0.3rem;
+    }
+
+    section {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    section:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    h1 {
+      color: var(--accent);
+      font-size: 1.7rem;
+      line-height: 1.25;
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 0.9rem;
+      color: var(--accent-light);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.9rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+    }
+
+    ul {
+      margin-left: 1.1rem;
+      margin-bottom: 0.8rem;
+      padding-left: 0.2rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+      font-size: 0.95rem;
+    }
+
+    .post-date {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+
+    #theme-toggle {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 9999;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      padding-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 800px) {
+      body {
+        padding: 2.2rem 1.1rem;
+      }
+
+      .layout {
+        flex-direction: column;
+        gap: 1.8rem;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-right: 0;
+        padding-bottom: 1.4rem;
+      }
+
+      .content {
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<button id="theme-toggle">Dark mode</button>
+
+<main>
+  <div class="layout">
+
+    <aside class="sidebar">
+      <figure class="profile-photo">
+        <img src="/profile.jpg" alt="Portrait of Ágnes Judit Juhász">
+      </figure>
+
+      <div class="side-label">Navigation</div>
+      <div class="side-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </aside>
+
+    <div class="content">
+      {{ content }}
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © 2025 Ágnes J. Juhász
+</footer>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  toggle.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    toggle.textContent = isDark ? 'Dark mode' : 'Light mode';
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  });
+
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    root.setAttribute('data-theme', saved);
+    toggle.textContent = saved === 'dark' ? 'Light mode' : 'Dark mode';
+  }
+</script>
+
+</body>
+</html>
