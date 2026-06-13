@@ -378,7 +378,7 @@
 
 .logo-grid {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.8rem;
 }
@@ -414,6 +414,25 @@
 html[data-theme="dark"] .logo-grid img {
   filter: grayscale(100%) invert(1);
   opacity: 0.85;
+}
+
+@media (max-width: 800px) {
+  .logo-grid {
+    gap: 0.6rem 0.8rem;
+  }
+
+  .logo-grid img {
+    max-width: 30%;
+    height: auto;
+  }
+
+  .logo-earlham {
+    height: 20px !important;
+  }
+
+  .logo-nhs {
+    height: 20px !important;
+  }
 }
 
     /* CONTACT form layout */
