@@ -60,6 +60,10 @@ permalink: /blog/
     RSS feed: <a href="/feed.xml">feed.xml</a>
   </p>
 
+  <hr>
+
+  <h2>Latest Posts</h2>
+
   <ul>
     {% for post in site.posts %}
       <li>
@@ -69,4 +73,5 @@ permalink: /blog/
       </li>
     {% endfor %}
   </ul>
+
 </section>
