@@ -7,7 +7,7 @@ permalink: /blog/
 <section>
   <h2>Blog</h2>
 
-  <p><em>English</em></p>
+  <p><em>in English</em></p>
 
   <p>
     Living systems are not simply collections of molecules, cells, or genes.
