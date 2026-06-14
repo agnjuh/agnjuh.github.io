@@ -2,3 +2,6 @@ title: Ágnes Judit Juhász
 description: Biomedical Science · Molecular Biotechnology · Computational Multi-omics
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
