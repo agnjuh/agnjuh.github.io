@@ -38,7 +38,7 @@
     }
 
     /* DARK mode sequence background style override */
-    html[data-theme="dark"] .mrna-seq-bg,
+    html[data-theme="dark"] .dna-seq-bg,
     html[data-theme="dark"] .protein-seq-bg {
       background: none;
       opacity: 0.08;
@@ -347,7 +347,7 @@
       }
 
       /* hide sequence animations on mobile */
-      .mrna-seq-bg {
+      .dna-seq-bg {
         display: none;
       }
 
@@ -512,7 +512,7 @@ html[data-theme="dark"] .logo-grid img {
     }
 
     /* mRNA sequence background column */
-    .mrna-seq-bg {
+    .dna-seq-bg {
       position: fixed;
       top: 0;
       right: 0;
@@ -528,14 +528,14 @@ html[data-theme="dark"] .logo-grid img {
     }
 
     /* mRNA scroll animation container */
-    .mrna-seq-track {
+    .dna-seq-track {
       display: flex;
       flex-direction: column;
       animation: seqScroll 40s linear infinite;
     }
 
     /* mRNA block text formatting */
-    .mrna-seq-block {
+    .dna-seq-block {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.72rem;
       letter-spacing: 0.1em;
@@ -799,13 +799,13 @@ DSD
     </div>
   </div>
 
-  <!-- mRNA sequence background (RIGHT column) -->
-  <div class="mrna-seq-bg">
-    <div class="mrna-seq-track">
-      <div class="mrna-seq-block"></div>
-      <div class="mrna-seq-block"></div>
-    </div>
+  <!-- DNA sequence background (RIGHT column) -->
+<div class="dna-seq-bg">
+  <div class="dna-seq-track">
+    <div class="dna-seq-block"></div>
+    <div class="dna-seq-block"></div>
   </div>
+</div>
 
 
   <!-- HERO spatial transcriptomics banner -->
@@ -1013,11 +1013,11 @@ DSD
   document.getElementById('updated').textContent =
     `Last updated: ${d.toLocaleString('en-US', { month: 'long', year: 'numeric' })}`;
 
-  // generate and format mRNA sequence block
+  // generate and format DNA sequence block
   (function() {
 
-    // raw mRNA sequence
-    const rawMRNA = `
+    // raw DNA sequence
+    const rawDNA = `
 CTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGC
 TGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTG
 CCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATG
@@ -1057,7 +1057,7 @@ TCTCCCTTTTTATATCCCATTTTTATATCGATCTCTTATTTTACAATAAAACTTTGCTGCCA
     `;
 
     // remove whitespace from sequence -- dark mode
-    const cleaned = rawMRNA.replace(/\s+/g, '').trim();
+    const cleaned = rawDNA.replace(/\s+/g, '').trim();
 
     // split into codons
     const codons = [];
@@ -1076,7 +1076,7 @@ TCTCCCTTTTTATATCCCATTTTTATATCGATCTCTTATTTTACAATAAAACTTTGCTGCCA
     const text = lines.join('\n');
 
     // insert formatted sequence into both DOM blocks
-    document.querySelectorAll('.mrna-seq-block').forEach(el => {
+    document.querySelectorAll('.dna-seq-block').forEach(el => {
       el.textContent = text;
     });
 
