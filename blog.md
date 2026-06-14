@@ -29,6 +29,10 @@ permalink: /blog/
     összetettsége iránt.
   </p>
 
+  <p>
+    RSS feed: <a href="/feed.xml">feed.xml</a>
+  </p>
+
   <ul>
     {% for post in site.posts %}
       <li>
