@@ -29,6 +29,33 @@ permalink: /blog/
     összetettsége iránt.
   </p>
 
+  <hr>
+
+  <h2>Subscribe</h2>
+
+  <p>
+    Receive occasional email updates when new posts are published.
+  </p>
+
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/agnjuh"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/agnjuh', 'popupwindow')"
+    class="embeddable-buttondown-form"
+  >
+    <label for="bd-email">Email address</label>
+    <br>
+    <input
+      type="email"
+      name="email"
+      id="bd-email"
+      placeholder="your@email.com"
+      required
+    >
+    <input type="submit" value="Subscribe">
+  </form>
+
   <p>
     RSS feed: <a href="/feed.xml">feed.xml</a>
   </p>

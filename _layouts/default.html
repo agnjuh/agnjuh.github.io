@@ -180,6 +180,46 @@
       border-top: 1px solid var(--border);
     }
 
+.embeddable-buttondown-form {
+  margin: 1.5rem 0;
+}
+
+.embeddable-buttondown-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.embeddable-buttondown-form input[type="email"] {
+  padding: 0.65rem 0.8rem;
+  width: 320px;
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  margin-right: 0.5rem;
+}
+
+.embeddable-buttondown-form input[type="submit"] {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.embeddable-buttondown-form input[type="submit"]:hover {
+  border-color: var(--accent-light);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
     @media (max-width: 800px) {
       body {
         padding: 2.2rem 1.1rem;
@@ -201,6 +241,15 @@
       .content {
         padding-left: 0;
       }
+  .embeddable-buttondown-form input[type="email"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.6rem;
+  }
+
+  .embeddable-buttondown-form input[type="submit"] {
+    width: 100%;
+  }
     }
   </style>
 </head>
