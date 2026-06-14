@@ -45,7 +45,6 @@ permalink: /blog/
     class="embeddable-buttondown-form"
   >
     <label for="bd-email">Email address</label>
-    <br>
     <input
       type="email"
       name="email"
