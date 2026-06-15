@@ -75,18 +75,18 @@
   width: 140px;
   height: auto;
   display: inline-block;
-  animation: appleDrop 0.35s ease-out both;
+  animation: appleDrop 0.7s ease-out both;
 }
 
 @keyframes appleDrop {
   0% {
     opacity: 0;
-    transform: translateY(-25px);
+    transform: translateY(-30px) rotate(-4deg);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg);
   }
 }
 
@@ -312,14 +312,15 @@ html[data-theme="dark"] .embeddable-buttondown-form input[type="email"]::placeho
 </figure>
 
       <div class="side-label">Navigation</div>
-      <div class="side-links">
-       <a href="/">Home</a>
-<a href="/blog/">Blog</a>
-<a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
-<a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
-<a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
-<a href="/#contact">Contact</a>
-      </div>
+     <div class="side-links">
+  <a href="/">Home</a>
+  <a href="/blog/">Blog</a>
+  <a href="{{ site.posts.first.url }}">Latest Post</a>
+  <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
+  <a href="https://linkedin.com/in/agnesjjuhasz" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="/#contact">Contact</a>
+</div>
     </aside>
 
     <div class="content">
