@@ -11,12 +11,13 @@ permalink: /search/
     Search blog posts by title or content.
   </p>
 
-  <input
-    type="search"
-    id="search-input"
-    placeholder="Search posts..."
-    autocomplete="off"
-  >
+<input
+  type="search"
+  id="search-input"
+  class="search-input"
+  placeholder="Search posts..."
+  autocomplete="off"
+>
 
   <ul id="search-results"></ul>
 </section>

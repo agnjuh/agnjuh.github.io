@@ -255,6 +255,33 @@ hr {
   margin: 2rem 0;
 }
 
+.search-input {
+  width: 420px;
+  max-width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+  line-height: 1.4;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-light);
+}
+
+html[data-theme="dark"] .search-input {
+  background: #111827;
+  border-color: #374151;
+  color: var(--text);
+}
+
+html[data-theme="dark"] .search-input::placeholder {
+  color: #6b7280;
+}
+
 html[data-theme="dark"] .embeddable-buttondown-form input[type="email"] {
   background: #111827;
   border-color: #374151;
