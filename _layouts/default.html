@@ -75,18 +75,18 @@
   width: 140px;
   height: auto;
   display: inline-block;
-  animation: appleDrop 0.7s ease-out both;
+  animation: appleAppear 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-@keyframes appleDrop {
+@keyframes appleAppear {
   0% {
     opacity: 0;
-    transform: translateY(-30px) rotate(-4deg);
+    transform: scale(0.25);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0) rotate(0deg);
+    transform: scale(1);
   }
 }
 
