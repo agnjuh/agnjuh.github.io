@@ -42,12 +42,23 @@ permalink: /tutoring/
     Available tutoring sessions can be viewed and booked through the calendar below.
   </p>
 
-  <div class="calendar-embed">
-    <iframe
-      src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0RC3LpQzn4MiUnHpSnA5TONJ_ip4_lX9VY_CH4IgfYJdC95AOXopD49Vco6jjgestGEwspvuD_?gv=true"
-      frameborder="0">
-    </iframe>
-  </div>
+ <div style="margin: 1.5rem 0;">
+  <a
+    href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0RC3LpQzn4MiUnHpSnA5TONJ_ip4_lX9VY_CH4IgfYJdC95AOXopD49Vco6jjgestGEwspvuD_"
+    target="_blank"
+    rel="noopener"
+    style="
+      display:inline-block;
+      padding:0.8rem 1.4rem;
+      border-radius:999px;
+      background:var(--accent-light);
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+    ">
+    Book a tutoring session
+  </a>
+</div>
 
   <p>
     If you cannot find a suitable time, please use the
