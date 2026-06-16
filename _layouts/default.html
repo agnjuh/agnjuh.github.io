@@ -255,6 +255,28 @@ hr {
   margin: 2rem 0;
 }
 
+
+.calendar-embed {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.calendar-embed iframe {
+  width: 100%;
+  height: 700px;
+  border: 0;
+  display: block;
+}
+
+html[data-theme="dark"] .calendar-embed {
+  background: #111827;
+  border-color: #374151;
+}
+
 .search-input {
   width: 320px;
   max-width: 100%;
@@ -292,27 +314,28 @@ html[data-theme="dark"] .embeddable-buttondown-form input[type="email"]::placeho
   color: #6b7280;
 }
 
-    @media (max-width: 800px) {
-      body {
-        padding: 2.2rem 1.1rem;
-      }
+  @media (max-width: 800px) {
+  body {
+    padding: 2.2rem 1.1rem;
+  }
 
-      .layout {
-        flex-direction: column;
-        gap: 1.8rem;
-      }
+  .layout {
+    flex-direction: column;
+    gap: 1.8rem;
+  }
 
-      .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        padding-right: 0;
-        padding-bottom: 1.4rem;
-      }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 1.4rem;
+  }
 
-      .content {
-        padding-left: 0;
-      }
+  .content {
+    padding-left: 0;
+  }
+
   .embeddable-buttondown-form input[type="email"] {
     width: 100%;
     margin-right: 0;
@@ -322,7 +345,13 @@ html[data-theme="dark"] .embeddable-buttondown-form input[type="email"]::placeho
   .embeddable-buttondown-form input[type="submit"] {
     width: 100%;
   }
-    }
+
+  .calendar-embed iframe {
+    height: 800px;
+  }
+}
+
+
   </style>
 </head>
 
