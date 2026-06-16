@@ -15,6 +15,8 @@ permalink: /blog/
     improbable. This blog explores the science of life and disease, the
     mechanisms that shape them, and the questions that continue to drive our
     search for understanding while deepening our appreciation of the living world.
+    In this blog, I occasionally write about my own projects, professional and personal experiences.
+
   </p>
 
   <p><em>Magyarul</em></p>
@@ -26,7 +28,7 @@ permalink: /blog/
     tudományát, az azokat formáló mechanizmusokat, valamint azokat a kérdéseket
     járja körül, amelyek továbbra is a megértés iránti törekvésünket hajtják,
     miközben egyre mélyebb megbecsülést ébresztenek bennünk az élő világ
-    összetettsége iránt.
+    összetettsége iránt. Ebben a blogban alkalmanként a saját projektjeimről, valamint szakmai és személyes tapasztalataimról is írok.
   </p>
 
   <hr>
