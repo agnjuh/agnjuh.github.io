@@ -27,7 +27,7 @@ permalink: /tutoring/
   <h2>Areas</h2>
 
   <ul>
-    <li>Biology, chemistry, and mathematics</li>
+    <li>Biology, chemistry, mathematics and statistics</li>
     <li>Biomedical science, molecular biology, cell biology, biochemistry, genetics, and immunology</li>
     <li>Scientific writing, literature reviews, dissertations, and presentations</li>
     <li>Experimental design, data interpretation, and research project planning</li>
