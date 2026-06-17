@@ -36,7 +36,7 @@ Sessions are available online in English and Hungarian. Swedish-language session
   <h2>Booking</h2>
 
   <p>
-    Available tutoring sessions can be viewed and booked through the calendar below.
+   Tutoring sessions can be booked through the calendar below.
   </p>
 
  <div style="margin: 1.5rem 0;">
