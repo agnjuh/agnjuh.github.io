@@ -8,16 +8,13 @@ Today I finally had the opportunity to visit Grimeton Radio Station (SAQ), a UNE
 
 Witnessing the 100-year-old, 200 kW Alexanderson alternator in operation was unforgettable.
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/0zu7PmbPuxU"
-  title="The Alexanderson alternator in operation during Alexanderson Day 2026"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen>
-</iframe>
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/0zu7PmbPuxU"
+    title="The Alexanderson alternator in operation during Alexanderson Day 2026"
+    allowfullscreen>
+  </iframe>
+</div>
 
 *The Alexanderson alternator ("The Old Lady") in operation during Alexanderson Day 2026.*
 
