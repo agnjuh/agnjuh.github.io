@@ -255,6 +255,44 @@
         height: 800px;
       }
     }
+
+    /* Tutoring subject and support tables */
+    .tutoring-table {
+      width: 100%;
+      margin: 1.2rem 0 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .tutoring-row {
+      display: grid;
+      grid-template-columns: minmax(0, 35%) minmax(0, 1fr);
+      gap: 1.5rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .tutoring-category {
+      color: var(--accent);
+      font-size: 0.93rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .tutoring-description {
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
+
+    @media (max-width: 600px) {
+      .tutoring-row {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+        padding: 0.9rem 0;
+      }
+    }
   </style>
 </head>
 
