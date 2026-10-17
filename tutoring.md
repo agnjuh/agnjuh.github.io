@@ -36,11 +36,11 @@ permalink: /tutoring/
     </div>
     <div class="tutoring-row">
       <div class="tutoring-category">Molecular &amp; Cellular Sciences</div>
-      <div class="tutoring-description">Molecular and cell biology, genetics, biochemistry, immunology and molecular biotechnology</div>
+      <div class="tutoring-description">Molecular and cell biology, genetics, biochemistry, and molecular biotechnology</div>
     </div>
     <div class="tutoring-row">
       <div class="tutoring-category">Biomedical Sciences</div>
-      <div class="tutoring-description">Haematology, transfusion science, clinical biochemistry, microbiology, cellular and molecular pathology, anatomy, physiology, pathophysiology and pharmacology</div>
+      <div class="tutoring-description">Haematology, transfusion science, immunology, clinical biochemistry, microbiology, cellular and molecular pathology, anatomy, physiology, pathophysiology and pharmacology</div>
     </div>
     <div class="tutoring-row">
       <div class="tutoring-category">Precision Medicine</div>
