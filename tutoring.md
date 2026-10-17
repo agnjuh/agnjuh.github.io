@@ -40,7 +40,7 @@ permalink: /tutoring/
     </div>
     <div class="tutoring-row">
       <div class="tutoring-category">Biomedical Sciences</div>
-      <div class="tutoring-description">Haematology, transfusion science, immunology, clinical biochemistry, microbiology, cellular and molecular pathology, anatomy, physiology, pathophysiology, pharmacology and professional and evidence-based practice</div>
+      <div class="tutoring-description">Haematology, transfusion science, immunology, clinical biochemistry, microbiology, cellular and molecular pathology, anatomy, physiology, pathophysiology, pharmacology, professional and evidence-based practice</div>
     </div>
     <div class="tutoring-row">
       <div class="tutoring-category">Precision Medicine</div>
