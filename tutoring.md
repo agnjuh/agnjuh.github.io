@@ -39,7 +39,7 @@ permalink: /tutoring/
       <div class="tutoring-description">Molecular and cell biology, genetics, biochemistry, immunology and molecular biotechnology</div>
     </div>
     <div class="tutoring-row">
-      <div class="tutoring-category">Clinical Biomedical Sciences</div>
+      <div class="tutoring-category">Biomedical Sciences</div>
       <div class="tutoring-description">Haematology, transfusion science, clinical biochemistry, microbiology, cellular and molecular pathology, anatomy, physiology, pathophysiology and pharmacology</div>
     </div>
     <div class="tutoring-row">
