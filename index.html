@@ -116,7 +116,7 @@
       letter-spacing: 0.02em;
     }
 
-    /* nole subtitles */
+    /* role subtitles */
     .role {
       font-size: 0.95rem;
       color: var(--muted);
@@ -297,6 +297,60 @@
       transform: scaleX(1);
     }
 
+    /* SERVICES TABLE STYLES */
+    .services-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 0.92rem;
+    }
+
+    .services-table th,
+    .services-table td {
+      padding: 0.75rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services-table th {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      font-weight: 600;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .services-table td.category {
+      font-weight: 600;
+      color: var(--accent-light);
+      width: 32%;
+      padding-right: 1rem;
+    }
+
+    .services-table td.description {
+      color: var(--text);
+    }
+
+    .services-table td.description ul {
+      margin: 0;
+      padding-left: 1rem;
+    }
+
+    .services-table td.description li {
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    .services-table tr:hover {
+      background-color: rgba(0, 0, 0, 0.015);
+    }
+
+    html[data-theme="dark"] .services-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
     /* FOOTER styling */
     footer {
       max-width: var(--max-width);
@@ -314,20 +368,20 @@
         padding: 2.2rem 1.1rem;
       }
 
-  main,
-  .layout,
-  .sidebar,
-  .content,
-  section {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
+      main,
+      .layout,
+      .sidebar,
+      .content,
+      section {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
 
-  p,
-  li {
-    overflow-wrap: break-word;
-  }
+      p,
+      li {
+        overflow-wrap: break-word;
+      }
 
       .layout {
         flex-direction: column;
@@ -346,124 +400,105 @@
         padding-left: 0;
       }
 
-      /* hide sequence animations on mobile */
-      .dna-seq-bg {
-        display: none;
-      }
-
+      .dna-seq-bg,
       .protein-seq-bg {
         display: none;
       }
+
+      .services-table th {
+        display: none;
+      }
+      .services-table td {
+        display: block;
+        width: 100% !important;
+        padding: 0.4rem 0;
+      }
+      .services-table td.category {
+        border-bottom: none;
+        padding-top: 0.8rem;
+      }
+      .services-table tr {
+        border-bottom: 1px solid var(--border);
+        display: block;
+        padding-bottom: 0.6rem;
+      }
     }
 
-/* Research environment logos */
-.research-environments {
-  margin-top: 1.4rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-}
+    /* Research environment logos */
+    .research-environments {
+      margin-top: 1.4rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
 
-.environment-names {
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 0.7rem;
-}
+    .environment-names {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 0.7rem;
+    }
 
-.environment-summary {
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
+    .environment-summary {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
 
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.8rem;
-}
+    .logo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.8rem;
+    }
 
-.logo-grid img {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.72;
-  filter: grayscale(100%);
-}
+    .logo-grid img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.72;
+      filter: grayscale(100%);
+    }
 
-.logo-ki {
-  height: 40px !important;
-}
+    .logo-ki { height: 40px !important; }
+    .logo-gu { height: 38px !important; }
+    .logo-earlham { height: 24px !important; }
+    .logo-nhs { height: 23px !important; }
+    .logo-elte { height: 40px !important; }
+    .logo-semmelweis { height: 34px !important; }
+    .logo-szte { height: 34px !important; }
 
-.logo-gu {
-  height: 38px !important;
-}
+    .professional-credentials {
+      margin-top: 1.2rem;
+    }
 
-.logo-earlham {
-  height: 24px !important;
-}
+    .logo-ibms {
+      height: 38px !important;
+      opacity: 0.55;
+    }
 
-.logo-nhs {
-  height: 23px !important;
-}
+    .logo-socialstyrelsen {
+      height: 36px !important;
+      opacity: 0.47;
+    }
 
-.logo-elte {
-  height: 40px !important;
-}
+    html[data-theme="dark"] .logo-grid img {
+      filter: grayscale(100%) invert(1);
+      opacity: 0.85;
+    }
 
-.logo-semmelweis {
-  height: 34px !important;
-}
-
-.logo-szte {
-  height: 34px !important;
-}
-
-
-.professional-credentials {
-  margin-top: 1.2rem;
-}
-
-.logo-ibms {
-  height: 38px !important;
-  opacity: 0.55;
-}
-
-.logo-socialstyrelsen {
-  height: 36px !important;
-  opacity: 0.47;
-}
-
-html[data-theme="dark"] .logo-grid img {
-  filter: grayscale(100%) invert(1);
-  opacity: 0.85;
-}
-
-@media (max-width: 800px) {
-  .logo-grid {
-    gap: 0.6rem 0.8rem;
-  }
-
-  .logo-grid img {
-    max-width: 30%;
-    height: auto;
-  }
-
-  .logo-earlham {
-    height: 20px !important;
-  }
-
-  .logo-nhs {
-    height: 20px !important;
-  }
-  .logo-ibms {
-    height: 40px !important;
-  }
-
-  .logo-socialstyrelsen {
-    height: 48px !important;
-  }
-}
+    @media (max-width: 800px) {
+      .logo-grid {
+        gap: 0.6rem 0.8rem;
+      }
+      .logo-grid img {
+        max-width: 30%;
+        height: auto;
+      }
+      .logo-earlham { height: 20px !important; }
+      .logo-nhs { height: 20px !important; }
+      .logo-ibms { height: 40px !important; }
+      .logo-socialstyrelsen { height: 48px !important; }
+    }
 
     /* CONTACT form layout */
     #contact form {
@@ -482,7 +517,6 @@ html[data-theme="dark"] .logo-grid img {
       margin-bottom: 0.25rem;
     }
 
-    /* contact form fields */
     #contact input[type="text"],
     #contact input[type="email"],
     #contact textarea {
@@ -500,7 +534,6 @@ html[data-theme="dark"] .logo-grid img {
       resize: vertical;
     }
 
-    /* SUBMIT button */
     #contact button[type="submit"] {
       padding: 0.5rem 1.2rem;
       border-radius: 999px;
@@ -521,7 +554,6 @@ html[data-theme="dark"] .logo-grid img {
       margin-top: 0.4rem;
     }
 
-    /* CONTACT form DARK mode fields */
     html[data-theme="dark"] #contact input[type="text"],
     html[data-theme="dark"] #contact input[type="email"],
     html[data-theme="dark"] #contact textarea {
@@ -536,7 +568,6 @@ html[data-theme="dark"] .logo-grid img {
       color: #6b7280;
     }
 
-    /* smooth page scrolling */
     html {
       scroll-behavior: smooth;
     }
@@ -557,16 +588,14 @@ html[data-theme="dark"] .logo-grid img {
       background: linear-gradient(to left, rgba(255,255,255,0.7), transparent);
     }
 
-    /* mRNA scroll animation container */
     .dna-seq-track {
       display: flex;
       flex-direction: column;
       animation: seqScroll 40s linear infinite;
     }
 
-    /* mRNA block text formatting */
     .dna-seq-block {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size: 0.72rem;
       letter-spacing: 0.1em;
       line-height: 1.55;
@@ -578,7 +607,6 @@ html[data-theme="dark"] .logo-grid img {
       padding-left: 4px;
     }
 
-    /* mRNA scroll animation */
     @keyframes seqScroll {
       0%   { transform: translateY(0); }
       100% { transform: translateY(-50%); }
@@ -600,16 +628,14 @@ html[data-theme="dark"] .logo-grid img {
       background: linear-gradient(to right, rgba(255,255,255,0.7), transparent);
     }
 
-    /* protein scroll animation container */
     .protein-seq-track {
       display: flex;
       flex-direction: column;
       animation: aaScroll 45s linear infinite;
     }
 
-    /* protein block text formatting */
     .protein-seq-block {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size: 0.7rem;
       letter-spacing: 0.12em;
       line-height: 1.55;
@@ -622,7 +648,6 @@ html[data-theme="dark"] .logo-grid img {
       text-align: right;
     }
 
-    /* protein scroll animation */
     @keyframes aaScroll {
       0%   { transform: translateY(-50%); }
       100% { transform: translateY(0); }
@@ -647,90 +672,69 @@ html[data-theme="dark"] .logo-grid img {
       display: block;
     }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,0.28) 0%,
-      rgba(0,0,0,0.16) 35%,
-      rgba(0,0,0,0.06) 70%,
-      rgba(0,0,0,0) 100%
-    );
-}
-
-.hero-content {
-  position: absolute;
-  left: 2rem;
-  bottom: 2.4rem;
-  z-index: 2;
-
-  width: 245px;
-
-  padding: 0.8rem 0.9rem;
-
-  color: #ffffff;
-
-  background: rgba(0, 0, 0, 0.30);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-
-  backdrop-filter: blur(4px);
-}
-
-
-.hero-content h1 {
-  font-size: 1.32rem;
-  font-weight: 600;
-  margin-bottom: 0.55rem;
-  line-height: 1.15;
-  white-space: nowrap;
-}
-
-   @media (max-width: 800px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
-  .hero {
-    width: 100%;
-  }
-
-  .hero img {
-    height: 230px;
-  }
-
-  .hero::after {
-    background:
-      linear-gradient(
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
         90deg,
-        rgba(0,0,0,0.78) 0%,
-        rgba(0,0,0,0.55) 48%,
-        rgba(0,0,0,0.18) 100%
+        rgba(0,0,0,0.28) 0%,
+        rgba(0,0,0,0.16) 35%,
+        rgba(0,0,0,0.06) 70%,
+        rgba(0,0,0,0) 100%
       );
-  }
+    }
 
-  .hero-content {
-    left: 1rem;
-    right: 1rem;
-    bottom: 1.2rem;
-    width: auto;
-    max-width: none;
-    padding: 1rem;
-  }
+    .hero-content {
+      position: absolute;
+      left: 2rem;
+      bottom: 2.4rem;
+      z-index: 2;
+      width: 245px;
+      padding: 0.8rem 0.9rem;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.30);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+    }
 
-  .hero-content h1 {
-    font-size: clamp(1.25rem, 6vw, 1.55rem);
-    white-space: normal;
-  }
+    .hero-content h1 {
+      font-size: 1.32rem;
+      font-weight: 600;
+      margin-bottom: 0.55rem;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
 
-  .hero-content p {
-    font-size: 0.9rem;
-  }
-}
+    @media (max-width: 800px) {
+      html, body { overflow-x: hidden; }
+      .hero { width: 100%; }
+      .hero img { height: 230px; }
+      .hero::after {
+        background: linear-gradient(
+          90deg,
+          rgba(0,0,0,0.78) 0%,
+          rgba(0,0,0,0.55) 48%,
+          rgba(0,0,0,0.18) 100%
+        );
+      }
+      .hero-content {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1.2rem;
+        width: auto;
+        max-width: none;
+        padding: 1rem;
+      }
+      .hero-content h1 {
+        font-size: clamp(1.25rem, 6vw, 1.55rem);
+        white-space: normal;
+      }
+      .hero-content p {
+        font-size: 0.9rem;
+      }
+    }
 
   </style>
 </head>
@@ -830,13 +834,12 @@ DSD
   </div>
 
   <!-- DNA sequence background (RIGHT column) -->
-<div class="dna-seq-bg">
-  <div class="dna-seq-track">
-    <div class="dna-seq-block"></div>
-    <div class="dna-seq-block"></div>
+  <div class="dna-seq-bg">
+    <div class="dna-seq-track">
+      <div class="dna-seq-block"></div>
+      <div class="dna-seq-block"></div>
+    </div>
   </div>
-</div>
-
 
   <!-- HERO spatial transcriptomics banner -->
   <header class="hero">
@@ -844,11 +847,11 @@ DSD
 
     <div class="hero-content">
       <h1>Ágnes Judit Juhász</h1>
-<p>
-  Biomedical Science<br>
-  Molecular Biotechnology<br>
-  <span style="white-space: nowrap;">Computational multi-omics</span>
-</p>
+      <p>
+        Biomedical Science<br>
+        Molecular Biotechnology<br>
+        <span style="white-space: nowrap;">Computational multi-omics</span>
+      </p>
     </div>
   </header>
 
@@ -873,9 +876,9 @@ DSD
             <div class="side-links">
               <a href="https://github.com/agnjuh" target="_blank" rel="noopener">GitHub</a>
               <a href="https://orcid.org/0000-0002-7318-4539" target="_blank" rel="noopener">ORCID</a>
-<a href="/blog/">Blog</a>
-<a href="/tutoring/">Tutoring</a>
-<a href="#contact">Contact me via email</a>
+              <a href="#services">Services</a>
+              <a href="/tutoring/">Tutoring</a>
+              <a href="#contact">Contact me via email</a>
             </div>
           </div>
 
@@ -894,60 +897,147 @@ DSD
         <section>
           <h2>About</h2>
 
-<p>
-I am a biomedical consultant scientist and molecular biotechnologist. My research experience spans immunology, haematology, cancer biology, regenerative biology, and developmental biology.
-</p>
-
-<p>
-My work integrates experimental and computational approaches to investigate cellular identity, plasticity, and state transitions during development, regeneration, inflammation, and disease. I combine stem-cell and organoid systems, genome engineering, perturbation-based approaches, multi-omics, machine learning, and computational modelling to study immune regulation and disease-associated cellular states.
-</p>
-
-<p>
-Alongside functional genomics, I have expertise in pharmaceutical bioinformatics, including structural bioinformatics, predictive modelling, and machine learning for drug discovery and translational research. I also serve on the Bio-protocol Peer Reviewer Board, reviewing experimental protocols across molecular and biomedical research.
-</p>
-
-  <p class="muted-text">
-            For a complete overview of my academic background, research experience, and skills, my detailed CV is available upon request via 
-            <a href="https://drive.google.com/drive/folders/1M2U_ocXMeP06-cYvOfPUqmXAjyWg5vZH?usp=sharing" target="_blank" rel="noopener">
-              this link</a>.
+          <p>
+            I am a biomedical consultant scientist and molecular biotechnologist. My research experience spans immunology, haematology, cancer biology, regenerative biology, and developmental biology.
           </p>
 
-<div class="research-environments">
-
- <p class="environment-summary">
-  Professional experience across academia, research institutes, and healthcare settings across Hungary, the United Kingdom, and Sweden.
-</p>
-
- <div class="logo-grid">
-  <img src="KI.png" alt="Karolinska Institutet" class="logo-ki">
-  <img src="gu.png" alt="University of Gothenburg" class="logo-gu">
-  <img src="EA.png" alt="Earlham Institute" class="logo-earlham">
-  <img src="NHS.png" alt="NHS" class="logo-nhs">
-  <img src="ELTE.png" alt="Eötvös Loránd University" class="logo-elte">
-  <img src="Semmelweis.png" alt="Semmelweis University" class="logo-semmelweis">
-  <img src="SZTE.png" alt="University of Szeged" class="logo-szte">
-</div>
-
-<div class="professional-credentials">
-
-  <p class="environment-summary">
-    Professional accreditation
-  </p>
-
-  <div class="logo-grid">
-    <img src="ibms.png" alt="IBMS Accredited" class="logo-ibms">
-    <img src="ST.png" alt="Socialstyrelsen" class="logo-socialstyrelsen">
-  </div>
-
-</div>
-
+          <p>
+            My work integrates experimental and computational approaches to investigate cellular identity, plasticity, and state transitions during development, regeneration, inflammation, and disease. I combine stem-cell and organoid systems, genome engineering, perturbation-based approaches, multi-omics, machine learning, and computational modelling to study immune regulation and disease-associated cellular states.
           </p>
+
+          <p>
+            Alongside functional genomics, I have expertise in pharmaceutical bioinformatics, including structural bioinformatics, predictive modelling, and machine learning for drug discovery and translational research. I also serve on the Bio-protocol Peer Reviewer Board, reviewing experimental protocols across molecular and biomedical research.
+          </p>
+
+          <div class="research-environments">
+            <p class="environment-summary">
+              Professional experience across academia, research institutes, and healthcare settings across Hungary, the United Kingdom, and Sweden.
+            </p>
+            <p class="muted-text">
+              For a complete overview of my academic background, research experience, and skills, my detailed CV is available upon request via <a href="https://drive.google.com/drive/folders/1M2U_ocXMeP06-cYvOfPUqmXAjyWg5vZH?usp=sharing" target="_blank" rel="noopener">this link</a>.
+            </p>
+
+            <div class="logo-grid">
+              <img src="KI.png" alt="Karolinska Institutet" class="logo-ki">
+              <img src="gu.png" alt="University of Gothenburg" class="logo-gu">
+              <img src="EA.png" alt="Earlham Institute" class="logo-earlham">
+              <img src="NHS.png" alt="NHS" class="logo-nhs">
+              <img src="ELTE.png" alt="Eötvös Loránd University" class="logo-elte">
+              <img src="Semmelweis.png" alt="Semmelweis University" class="logo-semmelweis">
+              <img src="SZTE.png" alt="University of Szeged" class="logo-szte">
+            </div>
+
+            <div class="professional-credentials">
+              <p class="environment-summary" style="margin-top: 1rem;">
+                Professional accreditation
+              </p>
+              <div class="logo-grid">
+                <img src="ibms.png" alt="IBMS Accredited" class="logo-ibms">
+                <img src="ST.png" alt="Socialstyrelsen" class="logo-socialstyrelsen">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES & CONSULTING (TABLE LAYOUT) -->
+        <section id="services">
+          <h2>Services & Consulting</h2>
+          <p>
+            I provide specialised computational biology services, custom multi-omics analysis, and bioinformatics pipeline development for biotech, pharma, and academic teams globally—offering official B2B consulting with <strong>F-skatt and VAT registration in Sweden</strong> (EU, UK, US, and worldwide).
+          </p>
+
+          <table class="services-table">
+            <thead>
+              <tr>
+                <th>Service Area</th>
+                <th>Capabilities & Applications</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="category">Single-Cell &amp; Spatial Multi-Omics</td>
+                <td class="description">
+                  <ul>
+                    <li><strong>scRNA-seq / scATAC-seq:</strong> QC, normalisation, batch correction, trajectory inference, and uncertainty-aware cell-state classification.</li>
+                    <li><strong>Spatial Transcriptomics (Visium):</strong> morphology-aware niche mapping, tumour microenvironment profiling, and neuroinflammatory niche analysis.</li>
+                    <li><strong>Immune Repertoire:</strong> paired V(D)J sequencing and BCR/TCR clonal expansion architecture.</li>
+                  </ul>
+                </td>
+              </tr>
+             <tr>
+                <td class="category">Regulatory Genomics &amp; Signalling</td>
+                <td class="description">
+                  <ul>
+                    <li><strong>Chromatin Dynamics:</strong> integrative ATAC-seq/ChIP-seq analysis of transcription factor dynamics, cellular signalling, and activation programs.</li>
+                    <li><strong>Disease Cohorts:</strong> Systems-level differential expression, co-expression networks, and functional enrichment (e.g., DLBCL, metabolic programs).</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="category">Complex Genetics &amp; Statistical Modelling</td>
+                <td class="description">
+                  <ul>
+                    <li><strong>GWAS &amp; GxE Modelling:</strong> genome-wide statistical interaction modelling to resolve context-dependent genetic penetrance.</li>
+                    <li><strong>Data Harmonisation:</strong> cohort integration across public repositories (GEO, EGA, SRA) and proprietary datasets.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="category">Machine Learning &amp; Drug Discovery</td>
+                <td class="description">
+                  <ul>
+                    <li><strong>Molecular Bioactivity (QSAR):</strong> small-molecule predictive modelling using RDKit descriptors, fingerprints, and ensemble algorithms.</li>
+                    <li><strong>Feature Engineering:</strong> transforming high-dimensional omics and morphology data into actionable biological markers.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="category">Pipelines &amp; Software Engineering</td>
+                <td class="description">
+                  <ul>
+                    <li><strong>Reproducible Workflows:</strong> scalable automated pipeline engineering using <strong>Snakemake, R, and Python</strong>.</li>
+                    <li><strong>Publication Visuals:</strong> high-impact, customisable figures and structured reporting.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top: 1.5rem;">
+            <a
+              href="#contact"
+              style="
+                display: inline-block;
+                padding: 0.8rem 1.4rem;
+                border-radius: 999px;
+                border: 1px solid var(--accent-light);
+                color: var(--accent-light);
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 0.9rem;
+              ">
+              Request a quote &amp; project scoping →
+            </a>
+          </div>
+        </section>
+
+        <!-- TUTORING TEASER -->
+        <section id="tutoring">
+          <h2>Tutoring & Academic Support</h2>
+          <p>
+            Looking for 1-on-1 coaching? I offer tailored online tutoring, exam preparation, and academic mentorship in biomedical, clinical, and life sciences (available in English, Hungarian, and Swedish).
+          </p>
+          <div style="margin-top: 1rem;">
+            <a href="/tutoring/" style="display:inline-block; padding:0.5rem 1.2rem; border-radius:999px; border:1px solid var(--accent-light); color:var(--accent-light); text-decoration:none; font-size:0.9rem; font-weight:500;">
+              View Full Tutoring Details, Subjects & Bookings →
+            </a>
+          </div>
         </section>
 
         <!-- CONTACT FORM -->
         <section id="contact">
           <h2>Contact</h2>
-          <p>If you would like to get in touch, you can send me a message using the form below.</p>
+          <p>If you would like to get in touch for consulting projects or professional inquiries, you can send a message using the form below.</p>
 
           <form action="https://formspree.io/f/mangdgzy" method="POST">
             <div class="form-row">
@@ -1000,7 +1090,6 @@ Alongside functional genomics, I have expertise in pharmaceutical bioinformatics
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
   });
 
-
   const saved = localStorage.getItem('theme');
   if (saved) {
     root.setAttribute('data-theme', saved);
@@ -1008,7 +1097,7 @@ Alongside functional genomics, I have expertise in pharmaceutical bioinformatics
   }
 </script>
 
-<!-- FOOTER timestamp & ...SEQ - mRNA formatting -->
+<!-- FOOTER timestamp & SEQ - mRNA formatting -->
 <script>
   // update footer with last-modified date
   const d = new Date();
@@ -1017,8 +1106,6 @@ Alongside functional genomics, I have expertise in pharmaceutical bioinformatics
 
   // generate and format DNA sequence block
   (function() {
-
-    // raw DNA sequence
     const rawDNA = `
 CTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGC
 TGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTG
@@ -1058,30 +1145,22 @@ CAGCTGGAAGGGTCAACATCTTTTACATTCTGCAAGCACATCTGCATTTTCACCCCACCCTTCCCCTCCT
 TCTCCCTTTTTATATCCCATTTTTATATCGATCTCTTATTTTACAATAAAACTTTGCTGCCA
     `;
 
-    // remove whitespace from sequence -- dark mode
     const cleaned = rawDNA.replace(/\s+/g, '').trim();
-
-    // split into codons
     const codons = [];
     for (let i = 0; i < cleaned.length; i += 3) {
       codons.push(cleaned.slice(i, i + 3));
     }
 
-    // format codons into lines
     const perLine = 3;
     const lines = [];
     for (let i = 0; i < codons.length; i += perLine) {
       lines.push(codons.slice(i, i + perLine).join(' '));
     }
 
-    // combine into text block
     const text = lines.join('\n');
-
-    // insert formatted sequence into both DOM blocks
     document.querySelectorAll('.dna-seq-block').forEach(el => {
       el.textContent = text;
     });
-
   })();
 </script>
 
