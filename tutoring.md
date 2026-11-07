@@ -84,7 +84,7 @@ permalink: /tutoring/
     Payments for ongoing tutoring sessions can be made conveniently via <strong>Swish</strong> (for clients in Sweden) or <strong>Wise</strong> (supporting international bank transfers and card payments globally).
   </p>
 
-  <div style="margin: 1.5rem 0;">
+ <div style="margin: 1.5rem 0;">
     <a
       href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0RC3LpQzn4MiUnHpSnA5TONJ_ip4_lX9VY_CH4IgfYJdC95AOXopD49Vco6jjgestGEwspvuD_"
       target="_blank"
@@ -98,7 +98,7 @@ permalink: /tutoring/
         text-decoration:none;
         font-weight:500;
       ">
-      Book your free initial consultation
+      Book a session or consultation
     </a>
   </div>
 
@@ -106,6 +106,5 @@ permalink: /tutoring/
     If you have questions about a particular subject or course,
     or cannot find a suitable time, please use the
     <a href="/#contact">contact form on the homepage</a>.
-    I will respond within 24 hours.
   </p>
 </section>
