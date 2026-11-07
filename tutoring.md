@@ -73,10 +73,15 @@ permalink: /tutoring/
 
   <hr>
 
-  <h2>Booking</h2>
+  <h2>Booking &amp; Fees</h2>
 
   <p>
-    Tutoring sessions can be booked through the calendar below.
+    The initial consultation (45 minutes) is <strong>free of charge</strong>. 
+    This session focuses on assessing your specific learning needs, discussing course material or project goals, and establishing a tailored plan and pricing structure.
+  </p>
+
+  <p>
+    Payments for ongoing tutoring sessions can be made conveniently via <strong>Swish</strong> (for clients in Sweden) or <strong>Wise</strong> (supporting international bank transfers and card payments globally).
   </p>
 
   <div style="margin: 1.5rem 0;">
@@ -93,7 +98,7 @@ permalink: /tutoring/
         text-decoration:none;
         font-weight:500;
       ">
-      Book a tutoring session
+      Book your free initial consultation
     </a>
   </div>
 
