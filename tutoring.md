@@ -76,7 +76,7 @@ permalink: /tutoring/
   <h2>Booking &amp; Fees</h2>
 
   <p>
-    The initial consultation (45 minutes) is <strong>free of charge</strong>. 
+    The <strong>initial consultation</strong> (45 minutes) is <strong>free of charge</strong>. 
     This session focuses on assessing your specific learning needs, discussing course material or project goals, and establishing a tailored plan and pricing structure.
   </p>
 
