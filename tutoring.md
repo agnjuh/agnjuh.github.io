@@ -98,7 +98,7 @@ permalink: /tutoring/
         text-decoration:none;
         font-weight:500;
       ">
-      Book a session or consultation
+      Book a Tutoring session or Consultation
     </a>
   </div>
 
