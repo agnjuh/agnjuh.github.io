@@ -29,51 +29,47 @@ permalink: /tutoring/
 
   <h2>Subjects</h2>
 
-  <table class="services-table">
-    <tbody>
-      <tr>
-        <td class="category">Foundational Sciences</td>
-        <td class="description">Biology, chemistry, mathematics and statistics</td>
-      </tr>
-      <tr>
-        <td class="category">Molecular &amp; Cellular Sciences</td>
-        <td class="description">Molecular and cell biology, genetics, biochemistry, and molecular biotechnology</td>
-      </tr>
-      <tr>
-        <td class="category">Biomedical Sciences</td>
-        <td class="description">Haematology, transfusion science, immunology, clinical biochemistry, microbiology, cellular and molecular pathology, anatomy, physiology, pathophysiology, pharmacology, professional and evidence-based practice</td>
-      </tr>
-      <tr>
-        <td class="category">Precision Medicine</td>
-        <td class="description">Precision and stratified medicine, pharmacogenomics and omics technologies</td>
-      </tr>
-      <tr>
-        <td class="category">Bioinformatics &amp; Data Analysis</td>
-        <td class="description">Bioinformatics, R, Python, statistical analysis and introductory machine learning</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="tutoring-table">
+    <div class="tutoring-row">
+      <div class="tutoring-category">Foundational Sciences</div>
+      <div class="tutoring-description">Biology, chemistry, mathematics and statistics</div>
+    </div>
+    <div class="tutoring-row">
+      <div class="tutoring-category">Molecular &amp; Cellular Sciences</div>
+      <div class="tutoring-description">Molecular and cell biology, genetics, biochemistry, and molecular biotechnology</div>
+    </div>
+    <div class="tutoring-row">
+      <div class="tutoring-category">Biomedical Sciences</div>
+      <div class="tutoring-description">Haematology, transfusion science, immunology, clinical biochemistry, microbiology, cellular and molecular pathology, anatomy, physiology, pathophysiology, pharmacology, professional and evidence-based practice</div>
+    </div>
+    <div class="tutoring-row">
+      <div class="tutoring-category">Precision Medicine</div>
+      <div class="tutoring-description">Precision and stratified medicine, pharmacogenomics and omics technologies</div>
+    </div>
+    <div class="tutoring-row">
+      <div class="tutoring-category">Bioinformatics &amp; Data Analysis</div>
+      <div class="tutoring-description">Bioinformatics, R, Python, statistical analysis and introductory machine learning</div>
+    </div>
+  </div>
 
   <hr>
 
   <h2>Academic &amp; Professional Support</h2>
 
-  <table class="services-table">
-    <tbody>
-      <tr>
-        <td class="category">Academic Support</td>
-        <td class="description">Examination preparation, coursework support, scientific writing, literature reviews, dissertations and presentations</td>
-      </tr>
-      <tr>
-        <td class="category">Research Support</td>
-        <td class="description">Experimental design, research methods, research project planning and data interpretation</td>
-      </tr>
-      <tr>
-        <td class="category">Professional Development</td>
-        <td class="description">Professional portfolio development for registration and licensure</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="tutoring-table">
+    <div class="tutoring-row">
+      <div class="tutoring-category">Academic Support</div>
+      <div class="tutoring-description">Examination preparation, coursework support, scientific writing, literature reviews, dissertations and presentations</div>
+    </div>
+    <div class="tutoring-row">
+      <div class="tutoring-category">Research Support</div>
+      <div class="tutoring-description">Experimental design, research methods, research project planning and data interpretation</div>
+    </div>
+    <div class="tutoring-row">
+      <div class="tutoring-category">Professional Development</div>
+      <div class="tutoring-description">Professional portfolio development for registration and licensure</div>
+    </div>
+  </div>
 
   <hr>
 
